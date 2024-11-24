@@ -5,15 +5,12 @@
 
 ### GitHub Project Description
 
-The goal of this project is the exploration of updating a Window Server 2025 virtual machine IP address from dynamic IP to a Static IP address. We also be updating the Host name of the server and enabling remote connection. Please note some information has been changed to minimize security risk associated with this project.
-
+This project aims to explore updating a Windows Server 2025 virtual machine's IP address from dynamic to Static. We will also update the server's Hostname and enable remote connections. Please note that some information has been changed to minimize the security risk associated with this project.
 - Updating Window Server 2025 IP address from dynamic to Static.
-- Changing the Window Server Host name.
-- Enabling remote connection to the Window Server virtual machine.
-  
+- Changing the Window Server Hostname.
+- Enabling remote connection to the Windows Server virtual machine.
 
-The goal is to make it easier to learn and apply best practices for installation of VMware, Window Server 2025 Iso, creation of the Virtual Machine and basic configuration.
-
+The goal of this project is to equip you with the knowledge and skills to apply best practices for installing VMware and Windows Server 2025 ISO, creating a Virtual Machine, and basic configuration. By the end of this project, you will be able to perform these tasks with ease and confidence.
 
 [Tools Used]
 
@@ -22,7 +19,6 @@ Server Manager
 Command Line
 PowerShell Terminal
 
-
 ## Steps
 [Dynamic IP to Static IP]
 
@@ -30,11 +26,12 @@ PowerShell Terminal
 Launch your VM by selecting Power on your Virtual Machine. 
 
 
+
 ![image](https://github.com/user-attachments/assets/7bc3f9de-b559-44df-8580-c79f5a8089d0)
 
  
 
-From Server Manager, select Local Server. Here we can see the computer name (host name), whether remote desktop is enabled or disabled, and IP connection information.
+From Server Manager, select Local Server. Here we can see the computer name (hostname), whether the remote desktop is enabled or disabled, and IP connection information.
 
 
 ![image](https://github.com/user-attachments/assets/01a353dd-7388-476d-800b-fa20eea88753)
@@ -43,7 +40,7 @@ From Server Manager, select Local Server. Here we can see the computer name (hos
 
  
 
-From the start menu, run Command Prompt as an administrator, type **Ipconfig/all** and press enter to find your connection information. If you see DHCP Enabled set to Yes, that means dynamic IP is enabled. Your new IP address and subnet needs to be of the same series.
+To find your connection information, open the Start menu and run Command Prompt as an administrator. Type **ipconfig /all** and press Enter. Look for the line that says "DHCP Enabled." If it is set to Yes, then dynamic IP assignment is enabled. Ensure that your new IP address and subnet are in the same series.
  
 
 ![image](https://github.com/user-attachments/assets/25cbf06e-7cdd-444f-a4dc-885c82b93512)
@@ -63,7 +60,7 @@ From server manager, open the Ethernet information, select Ipv4 properties.
 ![image](https://github.com/user-attachments/assets/44bcbd30-cf85-432f-bbf3-1cc8edde71f9)
  
 
-From properties, select the option use the following IP Address: and create an IP address a part of the series provides from the command line: prompt. Example 192.168.202.125, from here, enter the subnet mask, default gateway, and prefer the DNS server provided by the command line prompt. Once complete click ok.
+To configure the IP address, go to the properties section and select the option to use the following IP address. Choose an IP address from the given series, for example, 192.168.202.125. Next, enter the subnet mask and default gateway. Make sure to prefer the DNS server provided in the command line prompt. Once you have completed these steps, click OK.
  
 ![image](https://github.com/user-attachments/assets/24b03eaf-1ed7-4f9a-a75f-51ea0be9ff34)
 
@@ -83,7 +80,8 @@ To enable the Remote Desktop connection, double click on the disabled portion, n
 
 [Update Hostname]
 
-To update the computer name, click on the field to take to you into the system properties. Select rename server name by clicking change, update the host name, select apply and click okay to update the computer name.
+
+To update the computer name, click on the Computer Name field to access the system properties. Then, select the option to rename the server by clicking Change. Update the hostname, select Apply, and click OK to confirm the new computer name.
  
  
 
@@ -98,7 +96,8 @@ To update the computer name, click on the field to take to you into the system p
 
 [Server Update]
 
-Now restart your server and open Server Manager to verify that all information has been changed. The host name should be updated, the remote desktop should be enabled, and IP address series updated. Web browsers should open and next we will open up the power shell terminal. From the PowerShell terminal type **ping google.com** When you packet responses, this completes verify the Static IP Address was setup correctly. 
+
+Restart your server and then open the Server Manager to verify that all the information has been updated. The hostname should be changed, Remote Desktop should be enabled, and the IP address series should reflect the new settings. Next, open your web browsers, and then launch the PowerShell terminal. In the PowerShell terminal, type **ping google.com**. If you receive a response from the packet, it indicates that the static IP address has been set up correctly.
  
 
 ![image](https://github.com/user-attachments/assets/17a43450-7a9e-4ce6-a886-939bb87eaf5d)
