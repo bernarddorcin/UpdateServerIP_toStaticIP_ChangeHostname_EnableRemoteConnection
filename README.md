@@ -26,13 +26,6 @@ PowerShell Terminal
 ## Steps
 [Dynamic IP to Static IP]
 
-Select Edit virtual machine settings, navigate to network adapter, and select Bridged: Connect directly to physical network.
-
-
-![image](https://github.com/user-attachments/assets/f845b61a-f9c5-4f25-8c97-b5e1374bdd61)
-
-![image](https://github.com/user-attachments/assets/d5b85c46-ac4c-4576-a43e-d79f8f355c21)
- 
 
 Launch your VM by selecting Power on your Virtual Machine. 
 
@@ -50,14 +43,15 @@ From Server Manager, select Local Server. Here we can see the computer name (hos
 
  
 
-From the start menu, run Command Prompt as an administrator, type **pacing/all** and press enter to find your connection information. If you see DHCP Enabled set to Yes, that means dynamic IP is enabled. Your new IP address and subnet needs to be of the same series.
+From the start menu, run Command Prompt as an administrator, type **Ipconfig/all** and press enter to find your connection information. If you see DHCP Enabled set to Yes, that means dynamic IP is enabled. Your new IP address and subnet needs to be of the same series.
  
 
 ![image](https://github.com/user-attachments/assets/25cbf06e-7cdd-444f-a4dc-885c82b93512)
 
 ![image](https://github.com/user-attachments/assets/bb911a36-98d1-4c76-8a76-60d26d535f4b)
+![image](https://github.com/user-attachments/assets/8f8e127d-f25d-4a59-9af9-8bb4631ef5be)
 
-![image](https://github.com/user-attachments/assets/61dbe540-78b1-4858-b6cb-a94b096cdc51)
+
  
  
 
@@ -69,10 +63,10 @@ From server manager, open the Ethernet information, select Ipv4 properties.
 ![image](https://github.com/user-attachments/assets/44bcbd30-cf85-432f-bbf3-1cc8edde71f9)
  
 
-From properties, select the option use the following IP Address: and create an IP address a part of the series provides from the command line: prompt. Example 10.0.0.125, from here, enter the subnet mask, default gateway, and prefer the DNS server provided by the command line prompt. Once complete click ok.
+From properties, select the option use the following IP Address: and create an IP address a part of the series provides from the command line: prompt. Example 192.168.202.125, from here, enter the subnet mask, default gateway, and prefer the DNS server provided by the command line prompt. Once complete click ok.
  
+![image](https://github.com/user-attachments/assets/24b03eaf-1ed7-4f9a-a75f-51ea0be9ff34)
 
-![image](https://github.com/user-attachments/assets/63f7ad2e-4c52-48c2-9124-a71d08625401)
 
 
 [Enable Remote Desktop]
@@ -104,14 +98,14 @@ To update the computer name, click on the field to take to you into the system p
 
 [Server Update]
 
-Now restart your server and open server manager to verify information has been changed. The host name should be updated, the remote desktop should be enabled, and IP address series updated. Web browsers should open and next we will open up the power shell terminal. From the PowerShell terminal type **ping google.com** When you packet responses, this completes verify the Static IP Address was setup correctly. 
+Now restart your server and open Server Manager to verify that all information has been changed. The host name should be updated, the remote desktop should be enabled, and IP address series updated. Web browsers should open and next we will open up the power shell terminal. From the PowerShell terminal type **ping google.com** When you packet responses, this completes verify the Static IP Address was setup correctly. 
  
 
- ![image](https://github.com/user-attachments/assets/addc867b-3c81-4d1d-b11d-3aafb0211c5b)
+![image](https://github.com/user-attachments/assets/17a43450-7a9e-4ce6-a886-939bb87eaf5d)
 
  ![image](https://github.com/user-attachments/assets/31cfd229-fcf4-4d7c-939d-a124580ec292)
 
- ![image](https://github.com/user-attachments/assets/e8f87844-d97a-4866-ba5c-a0ff23c18242)
+![image](https://github.com/user-attachments/assets/419c14b0-4c7b-4d14-9ddb-42530f64474d)
 
- 
-This completes enabling or remote desktop connection. Host name update and changing the servers' IP address from Dynamic to Static.
+
+This completes enabling of remote desktop connection, Host name update, and changing the servers' IP address from Dynamic to Static.
